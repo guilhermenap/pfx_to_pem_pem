@@ -6,7 +6,7 @@
 		$open_pfx = openssl_pkcs12_read(file_get_contents('certificate.pfx'), $p12, 'password');
 		if ($open_pfx) {
 			$pfx_to_pem = openssl_x509_parse($pem['cert']);
-			$filename = 'whs_teste.pem';
+			$filename = 'name_of_cert.pem';
 			$create = fopen($filename, 'w');
 			fwrite($create, $pem['cert'].$pem['pkey']);
 			fclose($create);
